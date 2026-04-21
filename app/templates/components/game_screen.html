@@ -1,27 +1,27 @@
 <div id="game-container">
-<div class="flex flex-col min-h-full bg-gray-50">
+<div class="flex flex-col min-h-full bg-parchment">
     <!-- Header -->
-    <header class="flex items-center justify-between p-3 bg-white border-b border-gray-200">
+    <header class="flex items-center justify-between p-3 bg-maroon-header border-b border-gold">
         <button
             hx-post="/reset"
             hx-target="#game-container"
             hx-swap="outerHTML"
-            class="text-gray-500 text-sm px-3 py-1.5 rounded active:bg-gray-100">
-            ← Back
+            class="text-parchment text-sm px-3 py-1.5 rounded" style="opacity:0.8;">
+            &#9664; Back
         </button>
-        <h1 class="font-bold text-gray-900">Soc Ops</h1>
+        <h1 class="font-hp-title font-bold text-gold" style="text-shadow: 0 1px 3px rgba(0,0,0,0.4);">Soc Ops</h1>
         <div class="w-16"></div>
     </header>
 
     <!-- Instructions -->
-    <p class="text-center text-gray-500 text-sm py-2 px-4">
-        Tap a square when you find someone who matches it.
+    <p class="text-center text-sm italic py-2 px-4" style="color: var(--hp-ink-light);">
+        Tap a square when you find a witch or wizard who matches.
     </p>
 
     <!-- Bingo indicator -->
     {% if session.has_bingo %}
-    <div class="bg-amber-100 text-amber-800 text-center py-2 font-semibold text-sm">
-        🎉 BINGO! You got a line!
+    <div class="text-center py-2 font-hp-title font-semibold text-sm" style="background: linear-gradient(to right, transparent, rgba(211,166,37,0.3), transparent); color: var(--hp-maroon);">
+        &#9889; BINGO! The House Cup is yours!
     </div>
     {% endif %}
 

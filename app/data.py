@@ -1,6 +1,6 @@
 from typing import Final
 
-FREE_SPACE: Final = "FREE SPACE"
+FREE_SPACE: Final = "\u26a1"
 
 QUESTIONS: Final[list[str]] = [
     "bikes to work",
